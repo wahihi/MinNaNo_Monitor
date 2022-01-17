@@ -12,6 +12,8 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 import serial
 import time
 
+import sys
+from PyQt5.QtGui import QIcon, QPixmap
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -128,7 +130,7 @@ class Ui_MainWindow(object):
         self.formLayoutWidget.hide()
 
         self.actionLollBack_Test.triggered.connect(self.convert)
-
+   
     def convert(self):
         if self.actionLollBack_Test.text() == "LollBack Test":
             self.actionLollBack_Test.setText("OFF_LollBackTest")
